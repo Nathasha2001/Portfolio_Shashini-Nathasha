@@ -1479,99 +1479,155 @@ img {
   }
 }
 /* ===========================
-   PRINT / PDF FIX
+   FINAL PRINT / PDF FIX
 =========================== */
 
 @media print {
 
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
   * {
     animation: none !important;
     transition: none !important;
-    opacity: 1 !important;
     transform: none !important;
+    opacity: 1 !important;
     visibility: visible !important;
+    box-shadow: none !important;
+    overflow: visible !important;
   }
 
+  html,
   body {
     background: #ffffff !important;
     color: #000000 !important;
+    height: auto !important;
     overflow: visible !important;
   }
 
   .navbar,
+  .cover-particles,
+  .cover-bg,
   .scroll-indicator,
-  .cover-particles {
+  .contact-form-card {
     display: none !important;
   }
 
   section,
   .section,
-  .cover-section {
-    page-break-inside: avoid;
-    break-inside: avoid;
+  .cover-section,
+  .intro-section,
+  .journal-section,
+  .career-section,
+  .cv-section,
+  .cert-section,
+  .conclusion-section,
+  .contact-section {
+    display: block !important;
+    background: #ffffff !important;
+    color: #000000 !important;
     min-height: auto !important;
     height: auto !important;
-    overflow: visible !important;
+    padding: 25px 0 !important;
+    page-break-inside: auto !important;
+    break-inside: auto !important;
   }
 
-  .cover-bg {
-    display: none !important;
-  }
-
+  .container,
   .cover-content,
   .intro-grid,
-  .cv-body,
-  .contact-grid {
-    display: block !important;
-  }
-
   .journal-grid,
-  .toc-grid,
-  .cert-grid {
+  .timeline,
+  .cv-body,
+  .contact-grid,
+  .toc-grid {
     display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
   }
 
   .journal-card,
   .toc-card,
-  .cert-card,
+  .timeline-card,
   .cv-card,
-  .contact-card,
-  .contact-form-card,
+  .cv-col,
+  .cert-card,
   .conclusion-card,
-  .timeline-card {
-    page-break-inside: avoid;
-    break-inside: avoid;
-    margin-bottom: 20px !important;
+  .contact-card,
+  .career-objective {
+    display: block !important;
     background: #ffffff !important;
     color: #000000 !important;
     border: 1px solid #cccccc !important;
-    box-shadow: none !important;
+    margin: 0 0 18px 0 !important;
+    padding: 16px !important;
+    height: auto !important;
+    page-break-inside: auto !important;
+    break-inside: auto !important;
   }
 
-  h1, h2, h3, h4, p, span, li, a, strong {
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
+  .cv-body,
+  .cv-col,
+  .cv-col + .cv-col {
+    border-left: none !important;
+    border-top: none !important;
+    background: #ffffff !important;
   }
 
-  .cover-name span {
+  .timeline::before,
+  .timeline-badge {
+    display: none !important;
+  }
+
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    display: block !important;
+    padding: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  h1, h2, h3, h4, p, span, li, a, strong,
+  .section-title,
+  .section-label,
+  .section-subtitle,
+  .cover-name,
+  .cover-name span,
+  .cover-degree,
+  .cover-university,
+  .cert-provider,
+  .cv-org,
+  .reflection-block p,
+  .intro-text-col p,
+  .conclusion-card p {
     color: #000000 !important;
     -webkit-text-fill-color: #000000 !important;
   }
 
   .profile-image,
   .hero-profile-image {
-    max-width: 220px !important;
-    height: auto !important;
     display: block !important;
-    margin: 20px auto !important;
+    max-width: 180px !important;
+    height: auto !important;
+    margin: 10px 0 20px 0 !important;
   }
 
   .cover-btn,
   .cv-download-btn,
   .hero-socials a {
-    border: 1px solid #000000 !important;
+    display: inline-block !important;
     background: #ffffff !important;
     color: #000000 !important;
-    box-shadow: none !important;
+    border: 1px solid #000000 !important;
+    margin: 4px !important;
+  }
+
+  input,
+  textarea,
+  button {
+    display: none !important;
   }
 }
