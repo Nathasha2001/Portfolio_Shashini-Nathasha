@@ -1478,3 +1478,100 @@ img {
     flex-direction: column;
   }
 }
+/* ===========================
+   PRINT / PDF FIX
+=========================== */
+
+@media print {
+
+  * {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    overflow: visible !important;
+  }
+
+  .navbar,
+  .scroll-indicator,
+  .cover-particles {
+    display: none !important;
+  }
+
+  section,
+  .section,
+  .cover-section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .cover-bg {
+    display: none !important;
+  }
+
+  .cover-content,
+  .intro-grid,
+  .cv-body,
+  .contact-grid {
+    display: block !important;
+  }
+
+  .journal-grid,
+  .toc-grid,
+  .cert-grid {
+    display: block !important;
+  }
+
+  .journal-card,
+  .toc-card,
+  .cert-card,
+  .cv-card,
+  .contact-card,
+  .contact-form-card,
+  .conclusion-card,
+  .timeline-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 20px !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #cccccc !important;
+    box-shadow: none !important;
+  }
+
+  h1, h2, h3, h4, p, span, li, a, strong {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+  }
+
+  .cover-name span {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+  }
+
+  .profile-image,
+  .hero-profile-image {
+    max-width: 220px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 20px auto !important;
+  }
+
+  .cover-btn,
+  .cv-download-btn,
+  .hero-socials a {
+    border: 1px solid #000000 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+}
