@@ -707,6 +707,58 @@ img { max-width: 100%; }
   background: rgba(59,130,246,0.03);
 }
 
+/* CERT DOWNLOAD BUTTONS */
+.cert-download {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1.25rem;
+}
+
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0.7rem 1.5rem;
+
+  border-radius: 50px;
+  border: 1.5px solid var(--blue);
+
+  background: rgba(59,130,246,0.1);
+  color: var(--blue-light);
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cv-download-btn:hover {
+  background: var(--blue);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(59,130,246,0.3);
+}
+
+/* CV variant — orange accent */
+.cv-download-btn--cv {
+  border-color: #ff914d;
+  background: rgba(255,145,77,0.1);
+  color: #ff914d;
+}
+
+.cv-download-btn--cv:hover {
+  background: linear-gradient(135deg, #ff6b35, #ff914d);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(255,107,53,0.35);
+}
+
+.cv-dl-icon { font-size: 1rem; }
+
 /* ===========================
    CONCLUSION
 =========================== */
